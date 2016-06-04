@@ -33,14 +33,14 @@ Server-VM the Domain ID 0.
 
 Run the following:
 ```
-/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 server read 1 data/vchan
+/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 server read 1 matrix
 ```
 
 ### Client-VM
 
 Run the following:
 ```
-/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 client write 0 /local/domain/0/data/vchan
+/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 client write 0 /local/domain/0/matrix
 ```
 
 ![Example](https://github.com/tolgauen/Xen-VCHAN-Guide/blob/master/xen-vchan.png)
