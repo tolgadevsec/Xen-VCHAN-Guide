@@ -20,21 +20,26 @@ make install-tools
 The following example is taken from here:
 http://lists.xenproject.org/archives/html/xen-users/2014-01/msg00162.html
 
+Load the following Xen kernel modules on both VMs:
+```
+$ sudo modprobe xen-evtchn
+$ sudo modprobe xen-gntalloc
+$ sudo modprobe xen-gntdev
+```
+In the following example, the Client-VM has the Domain ID 1 and the 
+Server-VM the Domain ID 0. 
+
 ### Server-VM
 
 Run the following:
 ```
-$ sudo modprobe xen-evtchn
-$ sudo modprobe xen-gntalloc
-/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 server read 0 data/vchan
+/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 server read 1 data/vchan
 ```
 
 ### Client-VM
 
 Run the following:
 ```
-$ sudo modprobe xen-gntdev
-$ sudo modprobe xen-gntalloc
 /xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 client write 0 /local/domain/0/data/vchan
 ```
 
