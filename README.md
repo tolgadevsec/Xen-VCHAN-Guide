@@ -15,7 +15,7 @@ make build-tools
 make install-tools
 ```
 
-## Run Xen VCHAN examples
+## Run Xen VCHAN Examples
 
 The following example is taken from here:
 http://lists.xenproject.org/archives/html/xen-users/2014-01/msg00162.html
@@ -24,6 +24,8 @@ http://lists.xenproject.org/archives/html/xen-users/2014-01/msg00162.html
 
 Run the following:
 ```
+$ sudo modprobe xen-evtchn
+$ sudo modprobe xen-gntalloc
 /xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 server read 0 data/vchan
 ```
 
@@ -31,6 +33,8 @@ Run the following:
 
 Run the following:
 ```
+$ sudo modprobe xen-gntdev
+$ sudo modprobe xen-gntalloc
 /xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 client write 0 /local/domain/0/data/vchan
 ```
 
