@@ -15,10 +15,7 @@ make build-tools
 make install-tools
 ```
 
-## Run Xen vchan examples
-
-The following example is taken from here:
-http://lists.xenproject.org/archives/html/xen-users/2014-01/msg00162.html
+## Run Xen vchan example
 
 Load the following Xen kernel modules on both VMs:
 ```
@@ -33,14 +30,14 @@ Server-VM the Domain ID 0.
 
 Run the following:
 ```
-/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 server read 1 matrix
+/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 server write 1 matrix
 ```
 
 ### Client-VM
 
 Run the following:
 ```
-/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 client write 0 /local/domain/0/matrix
+/xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 client read 0 /local/domain/0/matrix
 ```
 
 ![Example](https://github.com/tolgauen/Xen-VCHAN-Guide/blob/master/xen-vchan.png)
