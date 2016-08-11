@@ -43,7 +43,6 @@ Run the following:
 ![Example](https://github.com/tolgauen/Xen-VCHAN-Guide/blob/master/xen-vchan.png)
 
 ## Projects/Code using the Xen vchan protocol
-* vchan-echo - https://github.com/tolgauen/Xen-VCHAN-Echo-Example
 * ocaml-vchan - https://github.com/mirage/ocaml-vchan
 * vchan-aes - https://github.com/tklengyel/vchan-aes
 * Qubes OS - http://blog.invisiblethings.org/2015/10/01/qubes-30.html
