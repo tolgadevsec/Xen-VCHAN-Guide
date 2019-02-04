@@ -40,8 +40,6 @@ Run the following:
 /xen-4.6.0/tools/libvchan/$ sudo ./vchan-node1 client read 0 /local/domain/0/matrix
 ```
 
-![Example](https://github.com/tolgauen/Xen-VCHAN-Guide/blob/master/xen-vchan.png)
-
 ## Projects/Code using the Xen vchan protocol
 * ocaml-vchan - https://github.com/mirage/ocaml-vchan
 * vchan-aes - https://github.com/tklengyel/vchan-aes
